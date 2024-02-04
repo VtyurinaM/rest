@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/5.15.4/css/all.min.css"
+        crossorigin="anonymous"/>
+       <link rel="stylesheet" href="C:\Users\vtyur\OneDrive\Desktop\my_reg.css"/>
+       
+    </head>
+    <body>
+        <script src="Mail.js"></script>
+        <script src="my_reg.js"></script>
+        <script src="checkpass.js"></script>
+        <script src="Untitled-1.js"></script>
+        <div class="container" >
+            <div class="content">
+                <div class="logo">
+                    <img src="C:\Users\vtyur\OneDrive\Pictures\file.png" alt="" />
+                </div>
+               
+                <div class="image"></div>
+               
+                </div>
+            
+            <form  id="form" action="lk.html" method="post">
+                <div class="title">Войти в личный кабинет</div>
+                <div>
+                    <label for="username">Имя пользователя</label>
+                    <i class="fas fa-user"></i>
+
+                    <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Joy Shaheb "
+                    required
+                    />
+                    
+
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+
+                    <div class="error"></div>
+                    
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <i class="far fa-envelope"></i>
+               
+                    <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="abc@gmail.com"
+                    required/>
+                    
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+               
+                    <div class="error"></div>
+                </div>
+
+                <div>
+                    <label for="password">Пароль(буквы и цифры, не менее 8 символов):</label>
+                    <i class="fas fa-lock"></i>
+
+                    <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password here"
+                    required
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[[A-Z][a-z][0-9]]{8,}$"
+                    />
+
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+
+                    <div class="error"></div>
+                </div>
+                <div>
+                    <label for="password">Подтверждение пароля:</label>
+                    <i class="fas fa-lock"></i>
+
+                    <input
+                    type="password"
+                    name="confpassword"
+                    id="confpassword"
+                    placeholder="Confirm the password"
+                    required
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[[A-Z][a-z][0-9]]{8,}$"
+                    onblur="checkpass()"
+                    />
+
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon" ></i>
+
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="phone">Телефон (+7-XXX-XXX-XX-XX) </label>
+
+                    <input 
+                    type="tel" 
+                    name="phone" 
+                    id="phone"
+                    pattern="[+]{1}[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" 
+                    placeholder="+7-000-000-00-00"
+                    
+                    required />
+
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+
+                    <div class="error"></div>
+                </div>
+                <div class="acception" style="box-shadow: none;">
+                    <input 
+                    type="checkbox"
+                    name="politika"
+                    id="politika"
+                    required/>
+                    <div>Я принимаю правила данного сайта и согласен на обработку персональных данных.</div>
+                   
+                    
+                </div>
+                <button type="button" onclick="sendMail()">Задать вопрос </button>
+                <button id="btn" type="submit" onclick="save()">Записаться</button>
+            </div>
+            </form>
+    </body>
+</html>
